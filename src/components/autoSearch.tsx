@@ -83,9 +83,6 @@ const SearchBox = () => {
 		params.set('display_name', suggestion.display_name);
 		params.set('lat', suggestion.lat);
 		params.set('long', suggestion.lon);
-
-		// Use router.push to update the URL without a page reload
-		router.push(`?${params.toString()}`);
 	};
 
 	return (
