@@ -16,17 +16,6 @@ const WeatherPage = () => {
 	const apiKey = process.env.NEXT_PUBLIC_ZOMATO_API_KEY;
 	const { currentWeather } = useSelector((state: RootState) => state.weather);
 
-	// Log the API key and endpoint for debugging
-	useEffect(() => {
-		console.log('API Key:', apiKey);
-		console.log('Fetching Weather Data for:', {
-			place_id,
-			display_name,
-			lat,
-			long,
-		});
-	}, [apiKey, place_id, display_name, lat, long]);
-
 	useEffect(() => {
 		if (place_id && display_name && lat && long) {
 			setLoading(true);
